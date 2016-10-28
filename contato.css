@@ -1,0 +1,15 @@
+#carregando,
+#mensagem-sucesso,
+#mensagem-erro {
+  display: none; }
+  
+  .header {
+  position: relative;
+  background-image: url(imagens/b2g.jpg);
+  background-size: cover;
+  background-position: top;
+  min-height: 500px; }
+  .headerList {
+  background-color: #337ab7;
+  color: white;
+  cursor: pointer; }
