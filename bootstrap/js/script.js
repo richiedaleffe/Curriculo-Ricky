@@ -2,7 +2,6 @@ $(document).ready(function () {
 
 
     function enviarEmail() {
-
         var $requisicao = $.ajax({
             method: "POST",
             url: 'http://contato-twsatc.rhcloud.com/contato-api/email',
@@ -15,12 +14,10 @@ $(document).ready(function () {
                 para: $("#para").val()
             }
         });
-
         $requisicao.then(function (resposta) {
-
             $("#carregando").hide();
             if (resposta === true) {
-                $("#contact-form").trigger("reset");
+                $("#contato").trigger("reset");
                 $("#mensagem-sucesso").addClass("show");
             } else {
                 $("#mensagem-erro").addClass("show");
@@ -29,7 +26,7 @@ $(document).ready(function () {
     }
 
 
-    $("#contact-form").on("submit", function (event) {
+    $("#contato").on("submit", function (event) {
         event.preventDefault();
         enviarEmail();
     });
@@ -37,6 +34,4 @@ $(document).ready(function () {
     $(document).ajaxStart(function () {
         $("#carregando").show();
     });
-       
-
 });
