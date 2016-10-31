@@ -4,7 +4,7 @@ $(document).ready(function () {
     function enviarEmail() {
         var $requisicao = $.ajax({
             method: "POST",
-            url: 'http://contato-twsatc.rhcloud.com/contato-api/email',
+            url: 'https://contato-twsatc.rhcloud.com/contato-api/email',
             crossDomain: true,
             data: {
                 nome: $("#nome").val(),
